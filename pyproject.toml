@@ -9,7 +9,7 @@ description = "Find bugs as deviant behavior: infer what a Python codebase belie
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Ravi Tandon" }]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = []
 keywords = ["static analysis", "bug finding", "linter", "belief analysis", "metal", "xgcc"]
 classifiers = [
