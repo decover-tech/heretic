@@ -97,10 +97,11 @@ def _ann_kind(a: Optional[ast.AST]) -> Optional[str]:
     except Exception:
         return None
     t = t.strip("'\"")
+    raw = ast.unparse(a)  # keep spaces: `X or None` must still read as optional
     if t in ("None", "NoReturn", "Never"):
         return "none"
     import re as _re
-    if _re.search(r"\b(None|Any|object)\b", t) and t not in ("None",):
+    if _re.search(r"\b(None|Any|object)\b", raw) and t not in ("None",):
         return "optional"
     if t in ("Any", "object", "typing.Any") or t.startswith(("Optional[", "typing.Optional[")) or "|None" in t \
             or t.startswith("None|") or ",None]" in t or t.startswith(("Union[", "typing.Union[")) and "None" in t:

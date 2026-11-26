@@ -38,3 +38,9 @@ def ok_try(x) -> int:
         return int(x)
     except ValueError:
         raise
+
+
+def ok_or_none(uid) -> User or None:  # not valid typing, but it says None is allowed
+    if uid:
+        return User()
+    return None
