@@ -12,7 +12,7 @@ Coverity. The original tools only handled C. Heretic carries the same ideas to
 Python, with no annotations and no configuration.
 
 ```console
-$ pip install pyheretic
+$ pip install git+https://github.com/decover-tech/heretic   # PyPI release (pyheretic) coming
 $ heretic tests/fixtures/demo
 == MUST beliefs contradicted (code disagrees with itself; ranked by path simplicity) : 9 ==
 
