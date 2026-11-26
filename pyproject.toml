@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyheretic"
+version = "0.1.0"
+description = "Find bugs as deviant behavior: infer what a Python codebase believes, then flag the code that contradicts it."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ravi Tandon" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["static analysis", "bug finding", "linter", "belief analysis", "metal", "xgcc"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+heretic = "heretic.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["heretic*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
