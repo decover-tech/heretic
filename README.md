@@ -21,7 +21,7 @@ $ heretic tests/fixtures/demo
     (e.g. line 2). Either the check is dead or the earlier use can raise on None.
     path: lines 2 -> 3
 
-== MAY beliefs violated (deviations from what most of the codebase does; ranked by z) : 7 ==
+== MAY beliefs violated (deviations from what most of the codebase does; ranked by z) : 8 ==
 
 [ret-check] app/callers.py:26  (d)  #495512c4fb81
     Result of `lookup_user()` is used without a None check, but 4 of 6 call sites check it.
